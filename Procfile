@@ -1,0 +1,1 @@
+web: gunicorn Yupa110_midterm

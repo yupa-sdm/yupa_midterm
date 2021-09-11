@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Patient(models.Model):
     """Model definition for Patient."""
 
@@ -19,7 +20,7 @@ class Patient(models.Model):
         """Unicode representation of Patient."""
         return self.first_name + " " + self.last_name
 
-        
+
 class Hospital(models.Model):
     """Model definition for Hospital."""
 
@@ -36,6 +37,7 @@ class Hospital(models.Model):
         """Unicode representation of Hospital."""
         return self.hospital_name
 
+
 class Physician (models.Model):
     """Model definition for Physician."""
     # TODO: Define fields here
@@ -43,7 +45,8 @@ class Physician (models.Model):
     last_name = models.CharField(max_length=255)
     expertise = models.CharField(max_length=255)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-    hospital = models.ManyToManyField(Hospital, default=None, blank=True, null=True)
+    hospital = models.ManyToManyField(
+        Hospital, default=None, blank=True, null=True)
 
     class Meta:
         """Meta definition for Physician."""
@@ -54,6 +57,3 @@ class Physician (models.Model):
     def __str__(self):
         """Unicode representation of Physician."""
         return self.first_name + " " + self.last_name
-
-
-

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m4=wq$z#l9hn+#p@xbw+_7oqcc8atp)5i6pscbp7!hez#uge0x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'yupa-midterm.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'yupasdm-midterm.herokuapp.com']
 
 
 # Application definition
@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'Yupa110_midterm.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Yupa110_midterm',
         'USER': 'midterm',
@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR/'assets'
 STATICFILES_DIRS = [
     BASE_DIR/'statics',
-    ]
+]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

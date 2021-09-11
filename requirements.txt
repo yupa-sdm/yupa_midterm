@@ -1,6 +1,9 @@
 django
 gunicorn
 whitenoise
+<<<<<<< HEAD
 psycopg2
 netaddr
 dj-database-url
+=======
+>>>>>>> 38dfe82ab2f41ce17e0ed4ce1ed178b69af39d0b

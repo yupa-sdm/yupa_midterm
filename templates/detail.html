@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<!------->
+{% block title %}
+<!------->
+{{hospital.hospital_name}}
+<!------->
+{% endblock title %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ชื่อโรงพยาบาล</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for hospital in hospital.all %}
+        <tr>
+            <th scope="row">1</th>
+            <td>{{hospital_name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

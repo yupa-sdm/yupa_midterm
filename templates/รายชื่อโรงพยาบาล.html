@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+รายชื่อโรงพยาบาล
+{% endblock %}
+
+{% block conent %}
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ชื่อโรงพยาบาล</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for hospital in hospitals %}
+      <tr>
+        <td>#</td>
+        <td>
+          <a href="{% url 'detail' hospital.id %}">{{hospital.hospital_name}}</a>
+        </td>
+
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

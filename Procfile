@@ -1,1 +1,1 @@
-web: gunicorn Yupa110_midterm
+web: gunicorn Yupa110_midterm.wsgi
